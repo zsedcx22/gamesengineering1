@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.9)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(Games_Engineering)
+project(gamesengineering1)
 
 #### Setup Directories ####
 #Main output directory
@@ -21,3 +21,9 @@ file(GLOB_RECURSE SOURCES practical_1/*.cpp practical_1/*.h)
 add_executable(PRACTICAL_1 ${SOURCES})
 target_include_directories(PRACTICAL_1 PRIVATE ${SFML_INCS})
 target_link_libraries(PRACTICAL_1 sfml-graphics)
+
+#### Pong ####
+file(GLOB_RECURSE SOURCES pong/main.cpp)
+add_executable(Pong ${SOURCES})
+target_include_directories(Pong PRIVATE ${SFML_INCS})
+target_link_libraries(Pong sfml-graphics)
